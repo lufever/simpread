@@ -57,7 +57,7 @@ menu.OnClicked( ( info, tab ) => {
  * Listen runtime message, include: `shortcuts` `browser_action`
  */
 browser.runtime.onMessage.addListener( function( request, sender, sendResponse ) {
-    console.log( "background runtime Listener", request );
+    console.log( "backgrounds runtime Listener", request );
     switch ( request.type ) {
         case msg.MESSAGE_ACTION.shortcuts:
             getCurTab( { url: request.value.url }, tabs => {
